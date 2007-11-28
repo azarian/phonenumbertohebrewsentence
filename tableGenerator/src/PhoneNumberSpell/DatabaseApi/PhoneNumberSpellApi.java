@@ -22,7 +22,7 @@ public class PhoneNumberSpellApi {
     
     /** Creates a new instance of PhoneNumberSpellApi */
     public PhoneNumberSpellApi(Connection con) {
-        dbApi = new NumberToWordsApi(con);
+        dbApi = new NumberToWordsApi(con);        
     }
     //Definition: a consecunce number is a number which does not contain 0 or 1.
     private boolean isAConsecNumber(String number){
@@ -60,5 +60,10 @@ public class PhoneNumberSpellApi {
         
         return result;   
     }
+    
+    public void closeConnection(){
+        dbApi.closeConnection();
+    }
+    
     
 }
