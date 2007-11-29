@@ -38,8 +38,11 @@ public class PhoneNumberSpellApi {
         //Get the all word sentence.
         NumberWords nw = dbApi.getNumberWords(consecNumber);
         NumberSentence ns = new NumberSentence(consecNumber);
-        ns.getNumberWords().add(nw);
-        result.getSentences().add(ns);                 
+        if (nw.words.size() > 0 ){
+            ns.getNumberWords().add(nw);
+            result.getSentences().add(ns);      
+        }
+                   
         //Get all other sentences.
         for (int i = 2 ; i < consecNumber.length()-1 ; i++ ){
             String first = consecNumber.substring(0,i);
@@ -47,6 +50,8 @@ public class PhoneNumberSpellApi {
             
             //Get sentence for the fist number.
             nw = dbApi.getNumberWords(first);
+            if(nw.words.size() == 0)
+                continue;
             ns = new NumberSentence(first);
             ns.getNumberWords().add(nw);
             NumberSentences firstSentences  = new  NumberSentences(first);
