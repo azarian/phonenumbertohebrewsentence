@@ -22,15 +22,15 @@ public class PhoneNumberTokenizer {
         this.number = number;
     }
     
-    public String next(){
-        String result;
+    public PhoneNumberToken next(){
+        PhoneNumberToken result;
         if (isStartOftoken(number,reference)){
-            result = getTokenStartAt(number,reference);            
+            result = new PhoneNumberToken(getTokenStartAt(number,reference),true);            
         }
         else{
-            result = getNonTokenStartAt(number,reference);
+            result = new PhoneNumberToken(getNonTokenStartAt(number,reference),false);
         }
-        reference = reference + result.length();
+        reference = reference + result.getNumber().length();
         return result;      
     }
     
@@ -64,7 +64,36 @@ public class PhoneNumberTokenizer {
         while (endsAt < number.length() && !isStartOftoken(number,endsAt)   ){
             endsAt++;
         }
+        if (reference >= number.length()){
+            return "";
+        }
         return number.substring(reference,endsAt);
+    }
+    public class PhoneNumberToken{
+        String number;
+        boolean bConvertable;
+        public PhoneNumberToken(String number,boolean bConvertable){
+            this.setNumber(number);
+            this.setBConvertable(bConvertable);   
+            
+        }
+
+        public String getNumber() {
+            return number;
+        }
+
+        public void setNumber(String number) {
+            this.number = number;
+        }
+
+        public boolean isBConvertable() {
+            return bConvertable;
+        }
+
+        public void setBConvertable(boolean bConvertable) {
+            this.bConvertable = bConvertable;
+        }
+        
     }
     
     

@@ -28,7 +28,27 @@ public class PhoneNumberSpellApi {
     private boolean isAConsecNumber(String number){
         return true;//number.matches("[2-9]?");
     }
-    public NumberSentences getNumberSentences(String consecNumber) throws Exception{
+    
+    public NumberSentences getNumberSentences(String phoneNumber) throws Exception{
+        PhoneNumberTokenizer t= new PhoneNumberTokenizer(phoneNumber);
+        NumberSentences result = getEmptyNumberSentences();
+        while (true){
+            PhoneNumberTokenizer.PhoneNumberToken token = t.next();
+            if (token.getNumber().compareToIgnoreCase("") == 0)
+                break;
+            NumberSentences ns;
+            if (token.isBConvertable()){
+                 ns = getNumberSentencesR(token.getNumber());                
+            }else{
+                ns  = getNonConvertableNumberSentences(token.getNumber());
+            }
+            result = NumberSentences.append(result,ns);
+        }
+        return result;
+    }    
+    
+    
+    public NumberSentences getNumberSentencesR(String consecNumber) throws Exception{
         //Check that the input is legal.
         if( !isAConsecNumber(consecNumber) ||  consecNumber.length() < 2 ) {
             throw new Exception("Invalid input " + consecNumber + ". Input is not a consectuvie number or of lengh smaller then 2");       
@@ -57,13 +77,31 @@ public class PhoneNumberSpellApi {
             NumberSentences firstSentences  = new  NumberSentences(first);
             firstSentences.getSentences().add(ns);
             //Get sentences for the second number.
-            NumberSentences secondSentences =  getNumberSentences(second);
+            NumberSentences secondSentences =  getNumberSentencesR(second);
             //combine result
             NumberSentences combinedResult = NumberSentences.append(firstSentences,secondSentences);
             result.getSentences().addAll(combinedResult.getSentences());      
         }
         
         return result;   
+    }
+
+    private NumberSentences getNonConvertableNumberSentences(String number) {
+        NumberWords nw = new NumberWords(number);
+        NumberSentence ns = new NumberSentence(number);
+        ns.getNumberWords().add(nw);
+        NumberSentences nss = new NumberSentences(number);
+        nss.getSentences().add(ns);
+        return nss;
+        
+    }
+    private NumberSentences getEmptyNumberSentences() {
+        
+        NumberSentence ns = new NumberSentence("");
+        NumberSentences nss = new NumberSentences("");
+        nss.getSentences().add(ns);
+        return nss;
+        
     }
     
 }
