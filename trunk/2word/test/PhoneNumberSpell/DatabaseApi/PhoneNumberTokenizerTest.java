@@ -34,49 +34,54 @@ public class PhoneNumberTokenizerTest extends TestCase {
         PhoneNumberTokenizer instance = new PhoneNumberTokenizer("00115505033034514320");
         
         String expResult = "0011";
-        String result = instance.next();
-        System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);  
+        PhoneNumberTokenizer.PhoneNumberToken result = instance.next();
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());  
         
         expResult = "55";
         result = instance.next();
-        System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);       
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());       
         
         expResult = "050";
         result = instance.next();
-        System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);       
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());       
         
         expResult = "33";
         result = instance.next();
-        System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);       
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());       
         
         expResult = "0";
         result = instance.next();
-        System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);  
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());  
         
         expResult = "345";
         result = instance.next();
-        System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);  
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());  
         
         expResult = "1";
         result = instance.next();
-        System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);  
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());  
         
         expResult = "432";
         result = instance.next();
-       System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);  
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());  
         
         expResult = "0";
         result = instance.next();
-        System.out.println(expResult + " " + result);
-        assertEquals(expResult, result);  
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());  
+        
+        expResult = "";
+        result = instance.next();
+        System.out.println(expResult + " " + result.getNumber());
+        assertEquals(expResult, result.getNumber());  
         
     }
     
