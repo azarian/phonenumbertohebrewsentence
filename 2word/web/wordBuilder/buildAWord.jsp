@@ -113,8 +113,9 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
         
      <%
     try{
+           
            PhoneNumberSpellApi phoneApi;
-           DerbyServerConnectionFactory db = new DerbyServerConnectionFactory("localhost","numbertoword","root","nbuser","1527");
+           DerbyServerConnectionFactory db = new DerbyServerConnectionFactory();
            phoneApi  =  new PhoneNumberSpellApi(db.getConnection()); 
            String input = request.getParameter("textfield");
            NumberSentences ans =  phoneApi.getNumberSentences(input); 
