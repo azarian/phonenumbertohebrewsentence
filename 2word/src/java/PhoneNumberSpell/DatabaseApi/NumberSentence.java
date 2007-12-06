@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author Nadav
  */
-public class NumberSentence {
+public class NumberSentence implements Comparable  {
     
     private String number;
     private List<NumberWords> numberWords = new ArrayList<NumberWords>();
@@ -65,6 +65,14 @@ public class NumberSentence {
         }
         strWords +="]-}";
         return result + strWords;
+    }
+
+    public int compareTo(Object o) {
+        if (!(o instanceof NumberSentence)){
+            throw new ClassCastException();
+        }
+        NumberSentence ns = (NumberSentence)o;
+        return this.numberWords.size()- ns.numberWords.size();       
     }
     
 }

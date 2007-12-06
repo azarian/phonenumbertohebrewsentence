@@ -2,6 +2,7 @@ package PhoneNumberSpell.DatabaseApi;
 
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 /*
  * PhoneNumberSpellApi.java
@@ -44,6 +45,7 @@ public class PhoneNumberSpellApi {
             }
             result = NumberSentences.append(result,ns);
         }
+        Collections.sort(result.getSentences());
         return result;
     }    
     
