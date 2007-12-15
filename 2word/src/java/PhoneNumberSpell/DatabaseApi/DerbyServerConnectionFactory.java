@@ -16,25 +16,36 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author Nadav
  */
 public class DerbyServerConnectionFactory {
-    
-    
-    private static Class driverClass;    
+    private final static Logger logger = Logger.getLogger(DerbyServerConnectionFactory.class);
+    private static int instanceCounter = 0;
+    private static Class driverClass; 
+    private static Connection con_ = null;
 
 
-    public DerbyServerConnectionFactory() {        
+    public DerbyServerConnectionFactory() {
+        
     }    
 
     public Connection getConnection() throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, NamingException {
         
-        Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();         
-        DataSource ds = getNumberToWordDB();
-        return ds.getConnection();        
+        if (con_ == null || con_.isClosed() ){
+            BasicConfigurator.configure();
+            Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();         
+            DataSource ds = getNumberToWordDB();
+            instanceCounter++;
+            logger.info("getConnection - return new connection. -  "+instanceCounter);                
+            con_ = ds.getConnection();             
+        }
+        logger.info("getConnection - return exsting connection. -  " + instanceCounter);  
+        return con_;         
     }    
 
     private DataSource getNumberToWordDB() throws NamingException {
