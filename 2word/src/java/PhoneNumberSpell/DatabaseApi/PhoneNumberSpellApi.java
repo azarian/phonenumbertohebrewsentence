@@ -1,9 +1,12 @@
 package PhoneNumberSpell.DatabaseApi;
 
+import java.io.UnsupportedEncodingException;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.naming.NamingException;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.apache.log4j.spi.Configurator;
@@ -27,8 +30,10 @@ public class PhoneNumberSpellApi {
     private final static Logger logger = Logger.getLogger(PhoneNumberSpellApi.class);
     
     /** Creates a new instance of PhoneNumberSpellApi */
-    public PhoneNumberSpellApi(Connection con) {
-        dbApi = new NumberToWordsApi(con);        
+    public PhoneNumberSpellApi() throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException, NamingException, UnsupportedEncodingException {
+        //DerbyServerConnectionFactory dbFactory = new DerbyServerConnectionFactory();
+        DerbyConnectionFactoryHC dbFactory  = new DerbyConnectionFactoryHC();
+        dbApi = new NumberToWordsApi(dbFactory.getConnection());        
     }
     //Definition: a consecunce number is a number which does not contain 0 or 1.
     private boolean isAConsecNumber(String number){
