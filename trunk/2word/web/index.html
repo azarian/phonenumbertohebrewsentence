@@ -30,6 +30,7 @@ a:active {
 }
 .style2 {color: #E0DFE3}
 .style3 {font-family: Arial, Helvetica, sans-serif}
+.style4 {font-size:20pt}
 -->
 
 </style>
@@ -37,65 +38,120 @@ a:active {
          
 </head>
     <div align="center">
-        <body onenter = "dispatchAction()" >
+        <body onenter = "dispatchAction()" onload="init()">
+		
+		<!--url's used in the movie-->
+<!--text used in the movie-->
+<!--
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>ìîéìéí</b><font face="Arial Rounded MT Bold"><b> </b></font><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>äôåê</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>çæåø</b></font></p>
+<p align="right"></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>îñôø</b><font face="Arial Rounded MT Bold"><b> </b></font><b>çùá</b></font></p>
+<p align="right"><font face="Arial" size="16" color="#000000" letterSpacing="0.000000" kerning="1"><b>çæåø</b></font></p>
+-->
+<!-- saved from url=(0013)about:internet -->
+		
+		
+
+		
 				<div align="center">
-		<table width="906" height="705" border="0">
+		<table width="906" height="1041" border="0">
 		  <tr>
-			<td width="900" height="90"><img src="images\BGImages\barUp.gif" width="906" height="129" longdesc="images\BGImages\barUp.gif"/></td>
+			<td width="900" height="131"><img src="images\BGImages\barUp.gif" width="1034" height="147" longdesc="images\BGImages\barUp.gif"/></td>
 		  </tr>
 		  <tr>
-			<td height="469"><div align="center"></div>
+		    <td height="104"><div align="left"><img src="images/Icon/LogoWithTextSmall.gif" width="244" height="108" /></div>
+		    <td height="104">          
+		    <td height="104">          
+		    <td height="104"></td>
+	      </tr>
+		  <tr>
+			<td height="627">
                             <form action = "wordBuilder/buildAWord.jsp" method="post" name="form1" class="style3" id="form1" >
-                            <table width="900" height="467" border="0">
-                  <tr>
-                        <td width="79" height="50">&nbsp;</td>
-                        <td colspan="5" align="center" valign="middle" margin-left="auto" margin-right = "auto">
-                            <div align="center">
-                            <img src="images\Icon\2word_02.gif" width="280" height="113" longdesc="images\Icon\2word_02.gif" />
-                            </div>
-                        </td>
-                        <td align="center" valign="middle" margin-left="auto" margin-right = "auto">&nbsp;</td>
-                        <td width="18">&nbsp;</td>
+                            <table width="1007" height="617" border="0">
+                  <!--<tr>
+                        <td width="97" height="148" rowspan="2"><img   src = "images\about\about.gif" width = "84" height="90"   id = "About"onclick = onMouseClick(id) onmouseup="onMouseUp(id)" onmouseover=onMouseHover(id)  onmouseout=onMouseOut(id) hight = "60"  /></td>
+                        <td height="20" align="center" valign="middle" margin-left="auto" margin-right = "auto">
+                    <div align="center"></div>                        </td>
+                        <td width="53" rowspan="2">&nbsp;</td>
+                  </tr>-->
+
+                  <tr >
+                    <td width="186"  rowspan="4" align="center" valign="middle" margin-left="auto" margin-right = "auto">  
+					</td>
+				    <td width="634"  rowspan="4" align="center" valign="middle" margin-left="auto" margin-right = "auto">
+		<table style="display:block" id="InterfaceMovie">
+		<tr>
+		<td>			
+							<object id = "interface" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="630" height="600" align="left">
+		<param name="allowScriptAccess" value="sameDomain" />
+		<param name="movie" value="siteiterface2.swf" /><param name="menu" value="false" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed  src="siteiterface2.swf" menu="false" swLiveConnect=true name=interface quality="high" bgcolor="#ffffff" width="630" height="600" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</object>
+		</td>
+		</tr>
+		</table>
+		<table id="boardRow" style="display:none">
+				<tr >
+                    <td width="630" height="600" align="center" id="board" style = "style4">&nbsp;</td>
+                </tr>
+		</table>  
+					</td>
+				    <td width="173">
+				  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="140" height="600" id="Bar" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="Bar.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="Bar.swf" quality="high" bgcolor="#ffffff" width="140" height="600" name="Bar" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>					</td>
                   </tr>
+                  <!--
                   <tr>
-                        <td height="24">&nbsp;</td>
-                        <td colspan="5"><div align="right">
-                            &#1492;&#1508;&#1493;&#1498; &#1502;&#1505;&#1508;&#1512; &#1500;&#1502;&#1497;&#1500;&#1497;&#1501;<input name="radiobutton" id = "radiobutton2"type="radio" value="radiobutton"  />
-                            &#1492;&#1508;&#1493;&#1498; &#1502;&#1497;&#1500;&#1497;&#1501; &#1500;&#1502;&#1505;&#1508;&#1512;<input name="radiobutton" id = "radiobutton1" type="radio" value="radiobutton" checked = 1/>
-                              </div>
-                        </td>
-                        <td>&nbsp;</td>
+                        <td height="184"><img src="images\theTeam\theTeam.gif"  width = "79" height="79"   id = "WhoAreWe" onclick = onMouseClick(id) onmouseup="onMouseUp(id)" onmouseover=onMouseHover(id)  onmouseout=onMouseOut(id) hight = "60"  /></td>
                       <td>&nbsp;</td>
                   </tr>
                   <tr>
-                        <td height="31">&nbsp;</td>
-                        <td colspan="6"><input name="Submit" type="button"  value="Submit"  onclick = "dispatchAction()"/>
-                                <input   name="textfield"  id = "Text1" type="text" dir="rtl" lang="he" value="&#1492;&#1499;&#1504;&#1497;&#1505;&#1493; &#1502;&#1497;&#1500;&#1497;&#1501; &#1488;&#1493; &#1502;&#1505;&#1508;&#1512;&#1497;&#1501; &#1489;&#1489;&#1511;&#1513;&#1492;" size="80" />
-                        </td>
+                        <td height="233"><img src="images\home\home.gif" width = "92" height="87"   id= "HomePage" onclick = onMouseClick(id) onmouseup="onMouseUp(id)" onmouseover=onMouseHover(id)  onmouseout=onMouseOut(id) hight = "60"  /></td>
                         <td>&nbsp;</td>
                   </tr>
                   <tr>
-                        <td height="21">&nbsp;</td>
-                        <td width="143">&nbsp;</td>
-                    <td width="107"><div align="center"><!--&#1510;&#1493;&#1512; &#1511;&#1513;&#1512;--><img   id = "Contact" src = "images\contact\contact.gif" width = "60" hight = "60" onclick = onMouseClick(id)  onmouseout=onMouseOut(id) onmouseover=onMouseHover(id) onmouseup="onMouseUp(id)"  /></div> </td>
-                    <td width="154"><div align="center"><!--&#1502;&#1497; &#1488;&#1504;&#1495;&#1504;&#1493;--><img   id = "WhoAreWe" src="images\theTeam\theTeam.gif"  width = "60" hight = "60" onclick = onMouseClick(id)  onmouseout=onMouseOut(id) onmouseover=onMouseHover(id) onmouseup="onMouseUp(id)"  /></div></td>
-                    <td width="143"><div align="center"><!--&#1488;&#1497;&#1498; &#1502;&#1513;&#1514;&#1502;&#1513;&#1497;&#1501; &#1489;&#1488;&#1514;&#1512;--><img   id = "About"   src = "images\about\about.gif" width = "60" hight = "60"onclick = onMouseClick(id)  onmouseout=onMouseOut(id) onmouseover=onMouseHover(id) onmouseup="onMouseUp(id)"  /></div></td>
-                    <td width="122"><div align="center"><!--&#1491;&#1507; &#1492;&#1489;&#1497;&#1514;--> <img   id= "HomePage" src="images\home\home.gif" width = "60" hight = "60" onclick = onMouseClick(id)  onmouseout=onMouseOut(id) onmouseover=onMouseHover(id) onmouseup="onMouseUp(id)"  /> </div></td>
-                          <td width="100">&nbsp;</td>
-                          <td>&nbsp;</td>
+                        <td height="85" rowspan="2"><img src = "images\contact\contact.gif" width = "84" height="83"   id = "Contact" onclick = onMouseClick(id) onmouseup="onMouseUp(id)" onmouseover=onMouseHover(id)  onmouseout=onMouseOut(id) hight = "60"  /></td>
+                    <td rowspan="2">&nbsp;</td>
                   </tr>
-                  <tr>
-                          <td height="210">&nbsp;</td>
-                          <td colspan="6" id = "board"><div align="center"></div></td>
-                          <td>&nbsp;</td>
-                  </tr>
+                  -->
                 </table>
+				<!--invisible input text to submit the form from flash to jsp -->
+				
+				<input name = "numberString"id="numberString"type="text" value="" style="display:none">
               </form>
-        </div>
-                          </td>
+        <td height="627">
+		  <td height="20">
+                          <td height="2"></td>
 		  </tr>
 		  <tr>
-                          <td height="116"><img src="images\BGImages\barDown.gif" width="906" height="131" longdesc="images\BGImages\barDown.gif" /></td>
+                          <td height="116"><img src="images\BGImages\barDown.gif" width="1034" height="149" longdesc="images\BGImages\barDown.gif" /></td>
 		  </tr>
 		</table>
         </body>
