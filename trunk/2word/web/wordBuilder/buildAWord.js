@@ -407,9 +407,10 @@
                     var row = selectedNumbersTable.insertRow(displayRowIndex);
                     displayRowIndex++;
                     var cell = row.insertCell(0);
-                    cell.innerHTML = "<h3>" + resultDisplay + "<h3>";
+                    cell.innerHTML = "<h3>\u05DE\u05E1\u05E4\u05E8" + displayRowIndex + " :<h3>";
                     var cell = row.insertCell(1);
-                    cell.innerHTML = "<h3>:\u05DE\u05E1\u05E4\u05E8" + displayRowIndex + " <h3>";
+                    cell.innerHTML = "<h3>" + resultDisplay + "<h3>";
+                    
               }
          
 
