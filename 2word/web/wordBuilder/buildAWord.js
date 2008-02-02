@@ -7,20 +7,20 @@
               var resultDisplay = "";
               var displayRowIndex = 0;
 
-              //set table display range
+              //1.set table display range
               function setTableDisplayRange(begin,end)
               {
                      beginDisplay = begin
                      endDisplay = end
               }
 
-              //set table size param
+              //2.set table size param
               function setTableSizeParam(sentencesSize)
               {
                     tableSize = sentencesSize
               }
 
-              //show or hide tabe bu the display range
+              //3.show or hide tabe bu the display range
               function ShowHideTable()
               {
                     for(var tableIndex = 0; tableIndex<tableSize; tableIndex++)
@@ -40,7 +40,7 @@
                     }
               }
               
-              //show next result
+              //4.show next result
               function OnNextResultButton()
               {
                 if(endDisplay+howManyToDisplayAtOnce<=tableSize)
@@ -57,7 +57,7 @@
                  }
               }
 
-              //show previos result
+              //5.show previos result
               function OnPrevResultButton()
               {
                 if(beginDisplay - howManyToDisplayAtOnce>=0)
@@ -72,7 +72,7 @@
 
               
 
-              //1.this function will calculat the ids for row number
+              //6.this function will calculate the ids for row number
               //and call calculate with the specific numbers
               var selectedRowId = ""
               function buildIdForCalulate(rowNumber,numOfElements)
@@ -157,7 +157,7 @@
             return -1
            }
               
-              //2.this function will connect all combo boxes in a table row
+              //7.this function will connect all combo boxes in a table row
               function calculate(numOfOptionBoxes,id1,id2,id3,id4,id5,id6,id7)
               {
                   var result = ""
@@ -355,9 +355,10 @@
                        }
                   }
                   resultDisplay = result;
-                  document.getElementById("resultTd").innerHTML =  "<div  valign='middle' dir='rtl' lang='he' style='style4'>" +  result  +" </div>"
+                  document.getElementById("resultTd").innerHTML =  "<div  valign='middle' dir='ltr'  style='style4'>" +  result  +" </div>"
               }
-
+              
+              //8.this function will set inner table background
               function setTableBG(rowNum)
               {
                     if(rowNum==""){
@@ -370,6 +371,7 @@
                     row.background ="..\\images\\BGImages\\tableBG.gif" 
               }
 
+              //9.this function sill set inner table background on hover
               function setTableBGHOVER(rowNum)
               {
                     if(rowNum==""){
@@ -382,6 +384,7 @@
                     row.background = "..\\images\\BGImages\\tableBGS.gif"
               }
 
+              //10.this function sill set inner table background on selected
               function setTableBGSELECT(rowNum)
               {
                    if(rowNum==""){
@@ -401,6 +404,8 @@
                     var row = document.getElementById(selectedRowId)
                     row.background = "..\\images\\BGImages\\tableBGSH.gif"
               }
+
+              //11.this function will manipulate adding rows and cells to selected numbers table
               function AdSelectedNumToTable()
               {
                     selectedNumbersTable = document.getElementById("selectedNumbers");
