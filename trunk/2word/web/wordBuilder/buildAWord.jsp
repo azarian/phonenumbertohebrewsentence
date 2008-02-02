@@ -30,9 +30,8 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
         body {
                 background-color: #FFFFFF;
         }
-        .style3 {font-family: Arial, Helvetica, sans-serif}
-         style4 {font-size:36pt}
-        .style4 {font-family: Arial, Helvetica, sans-serif; font-weight: bold; }
+        style3 {font-family: Arial, Helvetica, sans-serif}
+       
         -->
     
         </style>
@@ -40,31 +39,16 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
         <script src = "..\2Word.js"> </script>
     </head>
     <body >
-        <div align="center" dir="rtl" lang="he">
+        <div align="center" dir="ltr">
             <table width="912" height="1012" border="0">
                 <tr id="rG1">
                     <td height="112" colspan="4">
                         <img src="..\images\BGImages\barUp.gif" width="1034" height="147" longdesc="..\images\BGImages\barUp.gif" />
                     </td>
                 </tr>
-                <tr id="rG2">
-                    <td id = "resultTd"  dir = "rtl" align = "center"  lang="he"  valign="middle"  style = "font-size: 30pt" background = "..\images\BGImages\resultBG.gif"  height="70" colspan="4">
-                    </td>
-                </tr>
-                <tr id="rG3">  
-                    <td width="171" align="middle" valign="top" style="style3">
-                        <p>
-                            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="140" height="600" id="Bar" align="middle">
-                                <param name="allowScriptAccess" value="sameDomain" />
-                                <param name="movie" value="bar3.swf" />
-                                <param name="menu" value="false" />
-                                <param name="quality" value="high" />
-                                <param name="bgcolor" value="#ffffff" />
-                                <embed src="bar3.swf" menu="false" quality="high" bgcolor="#ffffff" width="140" height="600" name="Bar" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />                                     
-                            </object>
-                        </p>
-                    </td>    
-                    <td width="671" align="middle" valign="top" style="style3">
+                <tr id="rG2">  
+					<td width="220" height="313">                    </td> 
+                    <td width="637" align="middle" valign="top" style="style3">
                         <%
                         try{
                             PhoneNumberSpellApi phoneApi;
@@ -89,7 +73,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                         %>
                         <table  id="topTableImage"  background="..\images\BGImages\TableImageBGtopOne.gif"width="552"height="101">
                             <tr>
-                                <td align="right" dir="rtl" lang="he">
+                                <td align="right" dir="ltr">
                                 </td>
                             </tr>
                         </table>
@@ -144,22 +128,31 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                 </td>
                             </tr>
                         </table>
-                        <table id="buttomTableImage" background="..\images\BGImages\TableImageBGbottom.gif"width="552"height="49">
+                        <table id="buttomTableImageNew" background = "..\images\BGImages\TableImageBGmidWithWhite.gif"  width = "560" height= "136" >
                             <tr>
-                                <td align = "left">
-                                    <input type="button" name="Submit"  value='&#1513;&#1502;&#1493;&#1512; &#1514;&#1493;&#1510;&#1488;&#1492; &#1504;&#1493;&#1499;&#1495;&#1497;&#1514;' onclick= 'AdSelectedNumToTable()'>
-                                    <input type="button" name="Submit2" value='&#1506;&#1489;&#1493;&#1512; &#1500;&#1514;&#1493;&#1510;&#1488;&#1492; &#1492;&#1489;&#1488;&#1492;' onclick="OnNextResultButton()">
-                                    <input type="button" name="Submit3" value='&#1495;&#1494;&#1493;&#1512; &#1500;&#1514;&#1493;&#1510;&#1488;&#1492; &#1511;&#1493;&#1491;&#1502;&#1514;' onclick="OnPrevResultButton()">                                               
+                                <td  align="middle" dir="ltr" >    
+                                     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0"width="552" height="136" id="buttons2" align="middle">
+                                        <param name="allowScriptAccess" value="sameDomain" />
+                                        <param name="movie" value="buttons2.swf" />
+                                        <param name="quality" value="high" />
+                                        <embed src="buttons2.swf" quality="high"  width="552" height="150" name="buttons2" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                    </object>
                                 </td>
                             </tr>
                         </table>
-                        <table  id="topTableImage2"  background="..\images\BGImages\TableImageBGtop.gif"width="552"height="101">
+                        <table id="buttomTableImage2" background="..\images\BGImages\TableImageBGbottom.gif"width="552"height="49">
                             <tr>
-                                <td align="right"  dir="rtl" lang="he"><h1 class="style3">
+                                <td align = "left"> 
+                                </td>
+                            </tr>
+                        </table>             
+                        <table  id="topTableImage2" width="552"height="101" background="..\images\BGImages\TableImageBGtop.gif">
+                            <tr>
+                                <td align="right"  dir="ltr" ><h1 class="style3" >
                                 </td>
                             </tr>
                         </table>
-                        <table  background="..\images\BGImages\TableImageBG.gif"  width="552" id="selectedNumbers" dir="rtl" lang="he">
+                        <table  background="..\images\BGImages\TableImageBG.gif"  width="552" id="selectedNumbers" dir="ltr" >
                         </table>
                         <table id="buttomTableImage2" background="..\images\BGImages\TableImageBGbottom.gif"width="552"height="49">
                             <tr>
@@ -167,9 +160,23 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                 </td>
                             </tr>
                         </table>                               
+                  </td>
+                    <td width="169" align="middle" valign="top" style="style3">
+                        <p>
+                            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="140" height="600" id="Bar" align="middle">
+                                <param name="allowScriptAccess" value="sameDomain" />
+                                <param name="movie" value="bar3.swf" />
+                                <param name="menu" value="false" />
+                                <param name="quality" value="high" />
+                                <param name="bgcolor" value="#ffffff" />
+                                <embed src="bar3.swf" menu="false" quality="high" bgcolor="#ffffff" width="140" height="600" name="Bar" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />                                     
+                            </object>
+                        </p>
+                  </td>    
+                </tr>
+                 <tr id="rG3">
+                    <td id = "resultTd"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "..\images\BGImages\resultBG.gif"  height="70" colspan="4">
                     </td>
-                    <td width="180" height="313">
-                    </td> 
                 </tr>
                 <tr id="rG4">
                     <td height="119" colspan="4"><img src="..\images\BGImages\barDown.gif" width="1034" height="149" longdesc="..\images\BGImages\barDown.gif" />
@@ -183,3 +190,18 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
         </div>
     </body>
 </html>
+<!--
+ <input type="button" name="Submit"  value='&#1513;&#1502;&#1493;&#1512; &#1514;&#1493;&#1510;&#1488;&#1492; &#1504;&#1493;&#1499;&#1495;&#1497;&#1514;' onclick= 'AdSelectedNumToTable()'>
+                                    <input type="button" name="Submit2" value='&#1506;&#1489;&#1493;&#1512; &#1500;&#1514;&#1493;&#1510;&#1488;&#1492; &#1492;&#1489;&#1488;&#1492;' onclick="OnNextResultButton()">
+                                    <input type="button" name="Submit3" value='&#1495;&#1494;&#1493;&#1512; &#1500;&#1514;&#1493;&#1510;&#1488;&#1492; &#1511;&#1493;&#1491;&#1502;&#1514;' onclick="OnPrevResultButton()">     
+                                    
+                                    background="..\images\BGImages\TableImageBGbottom.gif"width="552"height="49"
+                                    
+                                    background="..\images\BGImages\TableImageBG.gif"
+                                    
+                                     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" background="..\images\BGImages\TableImageBG.gif" width="552" height="150" id="buttons2" align="middle">
+                                        <param name="allowScriptAccess" value="sameDomain" />
+                                        <param name="movie" value="buttons2.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="buttons2.swf" quality="high" bgcolor="#ffffff" width="552" height="150" name="buttons2" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+                                    </object>
+                                    <param name="bgcolor" value="#ffffff" />
+-->
