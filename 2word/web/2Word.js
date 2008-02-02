@@ -120,16 +120,20 @@
             document.getElementById("form1").submit()
             return
       }
+
+      //5.this function will init the body with a new data window - not used
       function init()
       { 
             updateDataWindow(onLoadWindowState);
       }
+
+      //6.this function will manipulate commands from other pages - not fully implemented - not used
       function onExternIconClick(id)
      {
             onLoadWindowState = 3;
      }
       
-
+     //7.this function will handle on mouse click operations
       function onMouseClick(id)
       {
             if(id == "HomePage"){
@@ -154,6 +158,7 @@
             }
       }
 
+      //8.this function will handle on mouse up operations - not used
       function onMouseUp(id)
       {
              if(id == "HomePage"){
@@ -174,6 +179,7 @@
             }
       }   
 
+      //9.this function will handle on mouse hover operations - not used
       function onMouseHover(id)
       {
              if(id == "HomePage"){
@@ -194,6 +200,7 @@
             }
       }
 
+      //10.this function will handle on mouse out operations - not used
       function onMouseOut(id)
       {
              if(id == "HomePage"){
@@ -213,16 +220,8 @@
                 return
             }
       }
-
-      //function setImageButtonSrc(ElementId,imagePath)
-      //{
-        //var image = document.getElementById(ElementId)
-       // image.src = imagePath
-      //  return
-      //}
       
-      
-      //this function will dispatch between first method to second method
+      //11.this function will dispatch between first method to second method
       function dispatchAction(send2jsp,value)
       {
             //var rb1 = document.getElementById("radiobutton1")
@@ -245,12 +244,12 @@
             }
       }
       
-      //5.this function  will update the data window - table cell with new content
+      //12.this function  will update the data window - table cell with new content
       function updateDataWindow(dataIndex)
       {
             var BoardRow          = document.getElementById("boardRow")
             var InterfaceRow = document.getElementById("InterfaceMovie")
-            if(dataIndex == 1)
+            if(dataIndex == 1) //this text will not be used (flash help instead)
             {
               BoardRow.style.display='none';
               InterfaceRow.style.display='block';
@@ -303,6 +302,7 @@
             }
        }
        
+       //13.this function will change order froma rtl to ltr
        function rtlToLtr(rtlString)
         {
             var ltrString = ""
@@ -313,6 +313,7 @@
             return ltrString;
         }
         
+        //14.this function will manage order recursivly - not used at the moment (for combining wrong orders between numbers & hebrew words
         function recursiveOrderManager(inputString)
         {
             var res = ""
@@ -350,6 +351,7 @@
             }
         }
         
+        //15.will check what is the first index of a number in the string
         function firstIndexOfNumber(NonHomogenic)
         {
             for(var i = 0; i < NonHomogenic.length; i++)
@@ -363,6 +365,7 @@
             return -1
         }
         
+        //16.will check what is the first index of a number in the string
         function firstIndexOfChar(NonHomogenic)
         {
             for(var i = 0; i<NonHomogenic.length; i++)
@@ -376,7 +379,7 @@
             return -1
         }
         
-        
+        //17.will validate if string is a number
         function IsNumber(num)
         {
             if(num=="0" || num=="1" || num=="2" || num=="3" || num=="4" || num=="5" || num=="6" || num=="7" || num=="8" || num=="9")
