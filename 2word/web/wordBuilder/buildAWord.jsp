@@ -46,8 +46,16 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                         <img src="../images/BGImages/barUp.gif" width="1034" height="147" longdesc="../images/BGImages/barUp.gif" />
                     </td>
                 </tr>
-                <tr id="rG2">  
-					<td width="220" height="313">                    </td> 
+                <tr id="rG2">
+                    <td id = "source"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "../images/BGImages/sourceBG.gif"  height="70" colspan="4">
+                    </td>
+                </tr>
+                <tr id="rG3">
+                    <td id = "resultTd"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "../images/BGImages/resultBG.gif"  height="70" colspan="4">
+                    </td>
+                </tr>
+                <tr id="rG4">  
+                    <td width="220" height="313">                    </td> 
                     <td width="637" align="middle" valign="top" style="style3">
                         <%
                         try{
@@ -59,6 +67,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                             List<NumberSentence> sentences = ans.getSentences();
                             int size = sentences.size();
                         %>
+                        <script type="text/javascript"> setSourceNumberDisplay(<%=input%>)</script> 
                         <script type="text/javascript"> setTableSizeParam(<%=size%>)</script> 
                         <%      
                         if(size<1){
@@ -131,7 +140,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                         <table id="buttomTableImageNew" background = "../images/BGImages/TableImageBGmidWithWhite.gif"  width = "560" height= "136" >
                             <tr>
                                 <td  align="middle" dir="ltr" >    
-                                     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0"width="552" height="136" id="buttons2" align="middle">
+                                    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0"width="552" height="136" id="buttons2" align="middle">
                                         <param name="allowScriptAccess" value="sameDomain" />
                                         <param name="movie" value="buttons2.swf" />
                                         <param name="quality" value="high" />
@@ -160,7 +169,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                 </td>
                             </tr>
                         </table>                               
-                  </td>
+                    </td>
                     <td width="169" align="middle" valign="top" style="style3">
                         <p>
                             <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="140" height="600" id="Bar" align="middle">
@@ -172,36 +181,18 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                 <embed src="bar3.swf" menu="false" quality="high" bgcolor="#ffffff" width="140" height="600" name="Bar" align="middle" allowscriptaccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />                                     
                             </object>
                         </p>
-                  </td>    
+                    </td>    
                 </tr>
-                 <tr id="rG3">
-                    <td id = "resultTd"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "../images/BGImages/resultBG.gif"  height="70" colspan="4">
-                    </td>
-                </tr>
-                <tr id="rG4">
+                
+                <tr id="rG5">
                     <td height="119" colspan="4"><img src="../images/BGImages/barDown.gif" width="1034" height="149" longdesc="../images/BGImages/barDown.gif" />
                     </td>
                 </tr>  
             </table>
             <!--Show Only current row-->
-            <script type="text/javascript"> ShowHideTable() </script>  
+            <script type="text/javascript"> ShowHideTable() </script>
             <!--fix ie problem-->
             <script type="text/javascript" src="../ieupdate.js"></script>
         </div>
     </body>
 </html>
-<!--
- <input type="button" name="Submit"  value='&#1513;&#1502;&#1493;&#1512; &#1514;&#1493;&#1510;&#1488;&#1492; &#1504;&#1493;&#1499;&#1495;&#1497;&#1514;' onclick= 'AdSelectedNumToTable()'>
-                                    <input type="button" name="Submit2" value='&#1506;&#1489;&#1493;&#1512; &#1500;&#1514;&#1493;&#1510;&#1488;&#1492; &#1492;&#1489;&#1488;&#1492;' onclick="OnNextResultButton()">
-                                    <input type="button" name="Submit3" value='&#1495;&#1494;&#1493;&#1512; &#1500;&#1514;&#1493;&#1510;&#1488;&#1492; &#1511;&#1493;&#1491;&#1502;&#1514;' onclick="OnPrevResultButton()">     
-                                    
-                                    background="../images/BGImages/TableImageBGbottom.gif"width="552"height="49"
-                                    
-                                    background="../images/BGImages/TableImageBG.gif"
-                                    
-                                     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" background="../images/BGImages/TableImageBG.gif" width="552" height="150" id="buttons2" align="middle">
-                                        <param name="allowScriptAccess" value="sameDomain" />
-                                        <param name="movie" value="buttons2.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="buttons2.swf" quality="high" bgcolor="#ffffff" width="552" height="150" name="buttons2" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
-                                    </object>
-                                    <param name="bgcolor" value="#ffffff" />
--->
