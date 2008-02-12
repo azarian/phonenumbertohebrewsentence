@@ -67,7 +67,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                             List<NumberSentence> sentences = ans.getSentences();
                             int size = sentences.size();
                         %>
-                        <script type="text/javascript"> setSourceNumberDisplay(<%=input%>)</script> 
+                        <script type="text/javascript"> setSourceNumberDisplay("<%=input%>")</script> 
                         <script type="text/javascript"> setTableSizeParam(<%=size%>)</script> 
                         <%      
                         if(size<1){
