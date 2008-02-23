@@ -143,7 +143,7 @@
             }
            if(id=="About" || id=="AboutInBoard"){
                 //setImageButtonSrc(id,"images\\about\\aboutp.gif")
-                window.open("about.html","aboutWindow")
+                window.open("about.html","aboutWindow","width = 1037 height=900 resizable=yes scrollbars=yes bgcolor=#ffffff")
                 return
             }
              if(id=="WhoAreWe" ){
