@@ -35,23 +35,23 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
         -->
     
         </style>
-        <script src = "../wordBuilder/buildAWord.js"> </script>
-        <script src = "../2Word.js"> </script>
+        <script src = "buildAWord.js"> </script>
+        <script src = "2Word.js"> </script>
     </head>
     <body >
         <div align="center" dir="ltr">
             <table width="912" height="1012" border="0">
                 <tr id="rG1">
                     <td height="112" colspan="4">
-                        <img src="../images/BGImages/barUp.gif" width="1034" height="147" longdesc="../images/BGImages/barUp.gif" />
+                        <img src="images/BGImages/barUp.gif" width="1034" height="147" longdesc="images/BGImages/barUp.gif" />
                     </td>
                 </tr>
                 <tr id="rG2">
-                    <td id = "source"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "../images/BGImages/sourceBG.gif"  height="70" colspan="4">
+                    <td id = "source"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "images/BGImages/sourceBG.gif"  height="70" colspan="4">
                     </td>
                 </tr>
                 <tr id="rG3">
-                    <td id = "resultTd"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "../images/BGImages/resultBG.gif"  height="70" colspan="4">
+                    <td id = "resultTd"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "images/BGImages/resultBG.gif"  height="70" colspan="4">
                     </td>
                 </tr>
                 <tr id="rG4">  
@@ -80,13 +80,13 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                         <%
                         }
                         %>
-                        <table  id="topTableImage"  background="../images/BGImages/TableImageBGtopOne.gif"width="552"height="101">
+                        <table  id="topTableImage"  background="images/BGImages/TableImageBGtopOne.gif"width="552"height="101">
                             <tr>
                                 <td align="right" dir="ltr">
                                 </td>
                             </tr>
                         </table>
-                        <table  background="../images/BGImages/TableImageBG.gif"  width="552">
+                        <table  background="images/BGImages/TableImageBG.gif"  width="552">
                             <tr>
                                 <td>  
                                     <% 
@@ -94,7 +94,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                     for(int indexInSentences = 0 ;indexInSentences<sentences.size();indexInSentences++) {
                                 //open row
                                     %>
-                                    <table id="t<%=indexInSentences%>"  align="center"  onmouseout=setTableBG("t<%=indexInSentences%>")  onmouseover=setTableBGHOVER("t<%=indexInSentences%>")    background ="../images/BGImages/tableBG.gif" width =300 >
+                                    <table id="t<%=indexInSentences%>"  align="center"  onmouseout=setTableBG("t<%=indexInSentences%>")  onmouseover=setTableBGHOVER("t<%=indexInSentences%>")    background ="images/BGImages/tableBG.gif" width =300 >
                                            <tr align = "center"  >
                                             <%
                                             int numberOfCombos=0;
@@ -137,7 +137,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                 </td>
                             </tr>
                         </table>
-                        <table id="buttomTableImageNew"  background = "../images/BGImages/TableImageBGmidWithWhite.gif"  width="560" height="136" ><!--background = "../images/BGImages/TableImageBGmidWithWhite.gif"  width = "560" height= "136" -->
+                        <table id="buttomTableImageNew"  background = "images/BGImages/TableImageBGmidWithWhite.gif"  width="560" height="136" ><!--background = "images/BGImages/TableImageBGmidWithWhite.gif"  width = "560" height= "136" -->
                             <tr>
                                 <td  dir="ltr" >    
                                     <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0"width="552" height="136" id="buttons2" align="middle">
@@ -149,21 +149,21 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                 </td>
                             </tr>
                         </table>
-                        <table id="buttomTableImage2" background="../images/BGImages/TableImageBGbottom.gif"width="552"height="49">
+                        <table id="buttomTableImage2" background="images/BGImages/TableImageBGbottom.gif"width="552"height="49">
                             <tr>
                                 <td align = "left"> 
                                 </td>
                             </tr>
                         </table>             
-                        <table  id="topTableImage2" width="552"height="101" background="../images/BGImages/TableImageBGtop.gif">
+                        <table  id="topTableImage2" width="552"height="101" background="images/BGImages/TableImageBGtop.gif">
                             <tr>
                                 <td align="right"  dir="ltr" ><h1 class="style3" >
                                 </td>
                             </tr>
                         </table>
-                        <table  background="../images/BGImages/TableImageBG.gif"  width="552" id="selectedNumbers" dir="ltr" >
+                        <table  background="images/BGImages/TableImageBG.gif"  width="552" id="selectedNumbers" dir="ltr" >
                         </table>
-                        <table id="buttomTableImage2" background="../images/BGImages/TableImageBGbottom.gif"width="552"height="49">
+                        <table id="buttomTableImage2" background="images/BGImages/TableImageBGbottom.gif"width="552"height="49">
                             <tr>
                                 <td align = "left"> 
                                 </td>
@@ -185,14 +185,14 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                 </tr>
                 
                 <tr id="rG5">
-                    <td height="119" colspan="4"><img src="../images/BGImages/barDown.gif" width="1034" height="149" longdesc="../images/BGImages/barDown.gif" />
+                    <td height="119" colspan="4"><img src="images/BGImages/barDown.gif" width="1034" height="149" longdesc="images/BGImages/barDown.gif" />
                     </td>
                 </tr>  
             </table>
             <!--Show Only current row-->
             <script type="text/javascript"> ShowHideTable() </script>
             <!--fix ie problem-->
-            <script type="text/javascript" src="../ieupdate.js"></script>
+            <script type="text/javascript" src="ieupdate.js"></script>
         </div>
     </body>
 </html>

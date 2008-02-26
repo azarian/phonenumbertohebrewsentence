@@ -47,11 +47,13 @@ public class DerbyConnectionFactoryHC {
         return con_;
     }
     private String getDbPath() throws UnsupportedEncodingException{
-        String str = URLDecoder.decode(getClass().getClassLoader().getResource("PhoneNumberSpell/DatabaseApi").toString(), "UTF-8");
+        return "/home/azarian/public_html/WEB-INF/Database/numbertoword";
+        /*String str = URLDecoder.decode(getClass().getClassLoader().getResource("PhoneNumberSpell/DatabaseApi").toString(), "UTF-8");
         // Create a path pointing to WEB-INF/db/flexdemodb/flexdemodb
         String path = str.substring(6, str.indexOf("classes/PhoneNumberSpell/DatabaseApi")) + "Database/numbertoword";
-        path = path.replace("/","\\");
-        return path;
+        //path = path.replace("/","\\");
+        //home\azarian\public_html\WEB-INF\Database\numbertoword
+        return path;*/
 
     }
     
