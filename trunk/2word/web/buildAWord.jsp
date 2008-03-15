@@ -40,11 +40,21 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
     </head>
     <body >
         <div align="center" dir="ltr">
-            <table width="912" height="1012" border="0">
+            <table width="1037" height="1012" border="0">
                 <tr id="rG1">
-                    <td height="112" colspan="4">
-                        <img src="images/BGImages/barUp.gif" width="1034" height="147" longdesc="images/BGImages/barUp.gif" />
-                    </td>
+                    <td height="147" colspan="4" background = "images/BGImages/barUp.gif">
+                        <!--<img src="images/BGImages/barUp.gif" width="1034" height="147" longdesc="images/BGImages/barUp.gif" />-->
+						<script type="text/javascript"><!--
+						google_ad_client = "pub-4470952783942862";
+						/* Head Unit */
+						google_ad_slot = "9909634802";
+						google_ad_width = 728;
+						google_ad_height = 90;
+						//-->
+						</script>
+						<script type="text/javascript"src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+						</script>
+						</td>
                 </tr>
                 <tr id="rG2">
                     <td id = "source"  dir = "ltr" align = "center"   valign="middle"  style = "font-size: 30pt" background = "images/BGImages/sourceBG.gif"  height="70" colspan="4">
@@ -55,7 +65,19 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                     </td>
                 </tr>
                 <tr id="rG4">  
-                    <td width="220" height="313">                    </td> 
+                    <td width="220" height="500">  
+					<script type="text/javascript"><!--
+					google_ad_client = "pub-4470952783942862";
+					/* 160x600, created 3/9/08 */
+					google_ad_slot = "3858933364";
+					google_ad_width = 160;
+					google_ad_height = 600;
+					//-->
+					</script>
+					<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>                  
+					</td> 
                     <td width="637" align="middle" valign="top" style="style3">
                         <%
                         try{
@@ -185,7 +207,18 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                 </tr>
                 
                 <tr id="rG5">
-                    <td height="119" colspan="4"><img src="images/BGImages/barDown.gif" width="1034" height="149" longdesc="images/BGImages/barDown.gif" />
+                    <td height="147" colspan="4" background = "images/BGImages/barDown.gif">
+					<!--<img src="images/BGImages/barDown.gif" width="1034" height="149" longdesc="images/BGImages/barDown.gif" />-->
+					<script type="text/javascript"><!--
+					google_ad_client = "pub-4470952783942862";
+					/* Head Unit */
+					google_ad_slot = "9909634802";
+					google_ad_width = 728;
+					google_ad_height = 90;
+					//-->
+					</script>
+					<script type="text/javascript"src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
                     </td>
                 </tr>  
             </table>
