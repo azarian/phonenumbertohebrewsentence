@@ -44,7 +44,22 @@ public class NumberToWordsApi {
         stmt = con.createStatement();            
         stmt.executeUpdate(query);            
         stmt.close();                   
+    }
+    public  void addNumberEnglishWord(final String number,final String word,final String type) throws SQLException{
+        //create sql query.
+        String query = MessageFormat.format("INSERT INTO \"numbertoenglishword\"" +
+                "(\"number\", \"word_type\", \"english_word\")" +
+                " VALUES ({0},{1},{2}) ",
+                number,
+                type,
+                quote(word));
+        
+        Statement stmt = null;
+        stmt = con.createStatement();            
+        stmt.executeUpdate(query);            
+        stmt.close();                   
     }    
+    
     public NumberWords getNumberWords(String number) throws SQLException{
         NumberWords result = new NumberWords(number);
         //create sql query.
@@ -55,10 +70,25 @@ public class NumberToWordsApi {
         while (rs.next()){            
             String word_type = String.valueOf(rs.getInt("word_type"));
             String hebrew_word = rs.getString("hebrew_word");
-            result.words.add(new HebrewWord(hebrew_word,word_type));
+            result.words.add(new Word(hebrew_word,word_type));
         }
         return result;
     }
+    public NumberWords getNumberEnglishWords(String number) throws SQLException{
+        NumberWords result = new NumberWords(number);
+        //create sql query.
+        StringBuffer query = new StringBuffer();
+        query.append("SELECT \"word_type\", \"english_word\" FROM \"numbertoenglishword\" WHERE \"number\"=" + number);
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(query.toString());
+        while (rs.next()){            
+            String word_type = String.valueOf(rs.getInt("word_type"));
+            String english_word = rs.getString("english_word");
+            result.words.add(new Word(english_word,word_type));
+        }
+        return result;
+    }
+    
     public void closeConnection() {
         if (con != null) {
             try {

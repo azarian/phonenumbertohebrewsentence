@@ -5,7 +5,7 @@
 <%@ page  import="PhoneNumberSpell.DatabaseApi.DerbyServerConnectionFactory" %>
 <%@ page  import="PhoneNumberSpell.DatabaseApi.NumberSentence" %>
 <%@ page  import="PhoneNumberSpell.DatabaseApi.NumberWords" %>
-<%@ page  import="PhoneNumberSpell.DatabaseApi.HebrewWord" %>
+<%@ page  import="PhoneNumberSpell.DatabaseApi.Word" %>
 <%@ page  import="java.util.List" %>
 <%@ page  import="java.util.ArrayList" %>
 <%--
@@ -84,7 +84,7 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                             PhoneNumberSpellApi phoneApi;
                             phoneApi  =  new PhoneNumberSpellApi();
                             String input = request.getParameter("numberString");
-                            NumberSentences ans =  phoneApi.getNumberSentences(input);
+                            NumberSentences ans =  phoneApi.getNumberEnglishSentences(input);
                             //build list of sntences
                             List<NumberSentence> sentences = ans.getSentences();
                             int size = sentences.size();
@@ -126,13 +126,13 @@ on Libraries node in Projects view can be used to add the JSTL 1.1 library.
                                             numberOfCombos = currentWordList.size();
                                             for(int comboIndex = 0;comboIndex<numberOfCombos;comboIndex++) {
                                                 NumberWords currentWord = currentWordList.get(comboIndex);
-                                                ArrayList<HebrewWord> currentHebrewWordsList = currentWord.words;  
+                                                ArrayList<Word> currentHebrewWordsList = currentWord.words;  
                                             %>
                                             <td align = "center" height="35" >
                                                 <select name="select" id =<%=indexInSentences%><%=comboIndex%> onFocus=buildIdForCalulate(<%=indexInSentences%>,<%=numberOfCombos%>) onChange=buildIdForCalulate(<%=indexInSentences%>,<%=numberOfCombos%>) onselect=buildIdForCalulate(<%=indexInSentences%>,<%=numberOfCombos%>) >
                                                         <%
                                                         for(int wordIndex = 0;wordIndex <currentHebrewWordsList.size();wordIndex++) {
-                                                    HebrewWord currentHebrewWord = currentHebrewWordsList.get(wordIndex);
+                                                    Word currentHebrewWord = currentHebrewWordsList.get(wordIndex);
                                                     String option = currentHebrewWord.toString();
                                                         %>
                                                         <option><%=option+" "%></option>

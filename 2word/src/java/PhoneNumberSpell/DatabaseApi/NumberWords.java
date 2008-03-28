@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class NumberWords {
     
     public String number;
-    public ArrayList<HebrewWord> words = new ArrayList<HebrewWord>();
+    public ArrayList<Word> words = new ArrayList<Word>();
     /**
      * Creates a new instance of NumberWords
      */
@@ -29,7 +29,7 @@ public class NumberWords {
     public NumberWords(NumberWords nw) {
         this.number = number; 
         for (int i = 0 ; i < nw.words.size() ; i++){
-            words.add(new HebrewWord(nw.words.get(i)));
+            words.add(new Word(nw.words.get(i)));
         }
     }
     public String toString(){

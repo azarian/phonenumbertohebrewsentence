@@ -1,5 +1,5 @@
 /*
- * HebrewWord.java
+ * Word.java
  *
  * Created on October 26, 2007, 4:13 PM
  *
@@ -13,15 +13,15 @@ package PhoneNumberSpell.DatabaseApi;
  *
  * @author Nadav
  */
-public class HebrewWord {   
+public class Word {   
         
     public String word;
     public String type;    
-    public HebrewWord(String word,String type){
+    public Word(String word,String type){
             this.word = word;
             this.type= type;
     }
-    public HebrewWord(HebrewWord hw){
+    public Word(Word hw){
             this.word = new String(hw.word);
             this.type= new String(hw.type);
     }
