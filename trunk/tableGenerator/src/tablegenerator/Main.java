@@ -39,12 +39,36 @@ import java.util.StringTokenizer;
 public class Main {
     
     HashMap<String,String> charToNumber = new HashMap<String,String>();
+    HashMap<String,String> eCharToNumber = new HashMap<String,String>();
     NumberToWordsApi api;
     PhoneNumberSpellApi phoneApi;
     
     /** Creates a new instance of Main */
     
     public Main() {
+        initHebrewMap();
+        initEnglishMap();
+        
+        //init db connection 
+        DerbyServerConnectionFactory db = new DerbyServerConnectionFactory("localhost","numbertoword","root","nbuser","1527");
+        //MySQLServerConnectionFactory db = new MySQLServerConnectionFactory("localhost","numbertoword","root","nbuser","3306");
+        
+        try {
+            api = new NumberToWordsApi(db.getConnection());
+            phoneApi  =  new PhoneNumberSpellApi(db.getConnection());
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        } catch (IllegalAccessException ex) {
+            ex.printStackTrace();
+        } catch (InstantiationException ex) {
+            ex.printStackTrace();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        
+    }
+
+    private void initHebrewMap() {
         charToNumber.put("\u05D3","2");
         charToNumber.put("\u05D4","2");
         charToNumber.put("\u05D5","2");
@@ -72,24 +96,34 @@ public class Main {
         charToNumber.put("\u05E2","9");
         charToNumber.put("\u05E3","9");
         charToNumber.put("\u05E4","9");
-        
-        //init db connection 
-        DerbyServerConnectionFactory db = new DerbyServerConnectionFactory("localhost","numbertoword","root","nbuser","1527");
-        //MySQLServerConnectionFactory db = new MySQLServerConnectionFactory("localhost","numbertoword","root","nbuser","3306");
-        
-        try {
-            api = new NumberToWordsApi(db.getConnection());
-            phoneApi  =  new PhoneNumberSpellApi(db.getConnection());
-        } catch (ClassNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IllegalAccessException ex) {
-            ex.printStackTrace();
-        } catch (InstantiationException ex) {
-            ex.printStackTrace();
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        
+    }
+    private void initEnglishMap() {
+        eCharToNumber.put("a","2");
+        eCharToNumber.put("b","2");
+        eCharToNumber.put("c","2");
+        eCharToNumber.put("d","3");
+        eCharToNumber.put("e","3");
+        eCharToNumber.put("f","3");
+        eCharToNumber.put("g","4");
+        eCharToNumber.put("h","4");
+        eCharToNumber.put("i","4");
+        eCharToNumber.put("j","5");
+        eCharToNumber.put("k","5");
+        eCharToNumber.put("l","5");
+        eCharToNumber.put("m","6");
+        eCharToNumber.put("n","6");
+        eCharToNumber.put("o","6");
+        eCharToNumber.put("p","7");
+        eCharToNumber.put("q","7");
+        eCharToNumber.put("r","7");
+        eCharToNumber.put("s","7");
+        eCharToNumber.put("t","8");
+        eCharToNumber.put("u","8");
+        eCharToNumber.put("v","8");
+        eCharToNumber.put("w","9");
+        eCharToNumber.put("x","9");
+        eCharToNumber.put("y","9");
+        eCharToNumber.put("z","9");
     }
     
     /**
@@ -98,9 +132,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Startig running.");
         Main m = new Main();
-        //m.readFile();
+        m.readFile();
         //m.test();
-        m.test2();
+        //m.test2();
     }
     public  String wordToNumber(String word){
         StringBuffer result = new StringBuffer();
@@ -116,6 +150,21 @@ public class Main {
         }
         return result.toString();
     }
+    public  String eWordToNumber(String word){
+        StringBuffer result = new StringBuffer();
+        for (int i = 0 ; i < word.length() ; i++){
+            
+            String charAt = word.substring(i,i+1);
+            charAt = charAt.toLowerCase();
+            if(eCharToNumber.containsKey(charAt)){
+                String currenNumber = eCharToNumber.get(charAt); 
+                result.append(currenNumber);
+            }else{
+                sop("character " + word.charAt(i) + " does not exists in the map");
+            }
+        }
+        return result.toString();
+    }
     
     public void readFile(){
         //declared here only to make visible to finally clause
@@ -124,8 +173,8 @@ public class Main {
         //use buffering, reading one line at a time
         //FileReader always assumes default encoding is OK!
         //input = new BufferedReader( new FileReader(new File("C:\\Documents and Settings\\Nadav\\tableGenerator\\wl\\tests2.txt")) );
-        input = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Documents and Settings\\Nadav\\tableGenerator\\wl\\he_unicode.txt"),"UNICODE"));
-  //String line = rdr.readLine();
+        input = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Documents and Settings\\Nadav\\tableGenerator2\\wl\\en-common.wl")));
+        //String line = rdr.readLine();
         String line = null; //not declared within while loop
         /*
           * readLine is a bit quirky :
@@ -136,7 +185,10 @@ public class Main {
         int nLines = 20;
         int currentLine= 0;
         while (( line = input.readLine()) != null){
-            processLine(line);            
+            processELine(line); 
+            /*currentLine++;
+            if (currentLine > nLines)
+                break;*/
           }
         }
         catch (FileNotFoundException ex) {
@@ -176,6 +228,18 @@ public class Main {
             
         }
         
+    }
+     private void processELine(String line) {
+       
+            String number = eWordToNumber(line);
+            String type  = "6";
+            try {
+                //Add it to the database
+                api.addNumberEnglishWord(number,line,type);
+                System.out.println("Added "+number + ", " + line);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }       
     }
     private static void sop(String s){
         Writer w = null;
