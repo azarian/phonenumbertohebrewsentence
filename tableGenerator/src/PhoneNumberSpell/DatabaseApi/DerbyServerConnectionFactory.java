@@ -42,7 +42,7 @@ public class DerbyServerConnectionFactory {
         Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();        
         //String url  = getURL(sqlServerName_, databaseName_, user_, passwd_, port_); 
         //return DriverManager.getConnection(url,user_,passwd_);
-        return DriverManager.getConnection("jdbc:derby:Database\\numbertoword",user_,passwd_);
+        return DriverManager.getConnection("jdbc:derby:C:\\Documents and Settings\\Nadav\\2word\\web\\WEB-INF\\Database\\numbertoword",user_,passwd_);
     }
 
     public int hashCode(){

@@ -45,6 +45,20 @@ public class NumberToWordsApi {
         stmt.executeUpdate(query);            
         stmt.close();                   
     }    
+    public  void addNumberEnglishWord(final String number,final String word,final String type) throws SQLException{
+        //create sql query.
+        String query = MessageFormat.format("INSERT INTO \"numbertoenglishword\"" +
+                "(\"number\", \"word_type\", \"english_word\")" +
+                " VALUES ({0},{1},{2}) ",
+                number,
+                type,
+                quote(word));
+        
+        Statement stmt = null;
+        stmt = con.createStatement();            
+        stmt.executeUpdate(query);            
+        stmt.close();                   
+    }    
     public NumberWords getNumberWords(String number) throws SQLException{
         NumberWords result = new NumberWords(number);
         //create sql query.
