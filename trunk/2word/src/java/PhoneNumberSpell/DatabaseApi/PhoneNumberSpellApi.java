@@ -157,7 +157,7 @@ public class PhoneNumberSpellApi {
             String second = consecNumber.substring(i);
             
             //Get sentence for the fist number.
-            nw = dbApi.getNumberWords(first);
+            nw = dbApi.getNumberEnglishWords(first);
             if(nw.words.size() == 0)
                 continue;
             ns = new NumberSentence(first);
@@ -190,6 +190,16 @@ public class PhoneNumberSpellApi {
         nss.getSentences().add(ns);
         return nss;
         
+    }
+
+    public static void main(String[] args) throws Exception {
+        BasicConfigurator.resetConfiguration();
+        BasicConfigurator.configure();
+         PhoneNumberSpellApi api = new PhoneNumberSpellApi();
+        NumberSentences numberEnglishSentences = api.getNumberEnglishSentences("4663");
+        int x= 3;
+
+
     }
     
 }
